@@ -23,15 +23,12 @@ public final class InteractPermissionHandler {
         String ns = id.getNamespace();
         String dot = ns + "." + id.getPath();
 
-        // mod global erlauben
         if (PermissionService.checkNode(sp, "mod.allow." + ns)) return true;
 
-        // exakt / namespace.* / global
         if (PermissionService.checkNode(sp, base + "." + dot)) return true;
         if (PermissionService.checkNode(sp, base + "." + ns + ".*")) return true;
         if (PermissionService.checkNode(sp, base + ".*")) return true;
 
-        // Tags prüfen: holder.tags() ist Stream<TagKey<Block>>
         boolean tagMatch = holder.tags().anyMatch((TagKey<Block> tag) -> {
             ResourceLocation tid = tag.location();
             return PermissionService.checkNode(sp, base + ".tag." + tid.getNamespace() + "." + tid.getPath());
@@ -55,7 +52,6 @@ public final class InteractPermissionHandler {
                 : PermissionService.checkNode(sp, "interact.allow_default");
 
         if (!allowed) {
-            // in NeoForge 1.21.x: FAIL statt DENY
             e.setCancellationResult(InteractionResult.FAIL);
             e.setCanceled(true);
             sp.displayClientMessage(PermConfig.MSG_INTERACT_DENY, true);

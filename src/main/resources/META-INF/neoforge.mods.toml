@@ -4,7 +4,7 @@ license="MIT"
 
 [[mods]]
 modId="permnodes"
-version="1.0.0"
+version="1.0.1"
 displayName="PermNodes"
 description='''
 Permission-based restrictions for block placement/mining and crafting.

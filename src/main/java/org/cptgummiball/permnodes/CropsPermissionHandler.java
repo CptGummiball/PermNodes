@@ -10,7 +10,6 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 public final class CropsPermissionHandler {
 
-    // Ernte: reife Crops abbauen
     @SubscribeEvent
     public void onBreak(BlockEvent.BreakEvent e) {
         if (!(e.getPlayer() instanceof ServerPlayer sp)) return;
@@ -30,7 +29,6 @@ public final class CropsPermissionHandler {
         }
     }
 
-    // Trampeln: Farmland wird zu Dirt
     @SubscribeEvent
     public void onTrample(BlockEvent.FarmlandTrampleEvent e) {
         if (!(e.getEntity() instanceof ServerPlayer sp)) return;
@@ -45,13 +43,11 @@ public final class CropsPermissionHandler {
         if (!allowed) e.setCanceled(true);
     }
 
-    // Saat legen: Seeds auf Farmland
     @SubscribeEvent
     public void onSeed(PlayerInteractEvent.RightClickBlock e) {
         if (!(e.getEntity() instanceof ServerPlayer sp)) return;
         if (PermissionService.checkNode(sp, "crops.bypass")) return;
 
-        // simple Heuristik: wenn der Block Farmland ist und Item "Seeds" heißt
         BlockState state = e.getLevel().getBlockState(e.getPos());
         boolean isFarmland = state.getBlock() instanceof FarmBlock;
         String name = e.getItemStack().getItem().toString().toLowerCase(); // robust genug, sonst explizit Tags prüfen

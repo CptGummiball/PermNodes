@@ -24,12 +24,12 @@ It integrates with **LuckPerms** (optional) to allow granular control over playe
 - 🔥 **Ignition:** `ignite.*` for TNT and fire  
 - 🌀 **Portals:** `portal.*` for dimension access  
 - ⚔️ **PvP:** `pvp.attack_players` and global toggles  
-- 🐄 **Animals:** breed, milk, shear, lead, name_tag  
+- 🐄 **Animals:** breed, milk, shear, lead, name_tag, attack
+- 🏠 **Villagers:** ineract (trade), attack
 - 🌾 **Crops:** harvest, trample, seed  
 - 🌊 **Fluids:** pickup and place control  
 - 👾 **Monsters:** restrict attacking hostile mobs  
-- 🧩 **Mod-wide bypass:** `mod.allow.<modid>`  
-- 💬 Custom in-game denial messages  
+- 🧩 **Mod-wide bypass:** `mod.allow.<modid>`
 
 ---
 
@@ -67,6 +67,8 @@ It integrates with **LuckPerms** (optional) to allow granular control over playe
 | **Fluids** | `fluids.place`, `fluids.pickup` |
 | **Monsters** | `monsters.attack.minecraft.creeper` |
 | **Mods (global)** | `mod.allow.minecraft`, `mod.allow.create` |
+
+[Permission reference](./Permission_Reference.md)
 
 > 🟢 LuckPerms handles wildcards automatically.  
 > 🟡 Without LuckPerms, `.allow_default` nodes act as fallbacks.

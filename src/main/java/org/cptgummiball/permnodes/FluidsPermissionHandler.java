@@ -16,7 +16,6 @@ public final class FluidsPermissionHandler {
 
         var item = e.getItemStack().getItem();
 
-        // Platzieren: Lava-/Wassereimer & andere BucketItems (Mod-Fluids)
         if (item instanceof BucketItem && item != Items.BUCKET) {
             boolean allowed = PermissionService.isLuckPermsPresent()
                     ? PermissionService.checkNode(sp, "fluids.place") ||
@@ -30,7 +29,7 @@ public final class FluidsPermissionHandler {
                 sp.displayClientMessage(PermConfig.MSG_FLUID_DENY, true);
             }
         }
-        // Aufnehmen: leerer Eimer
+
         else if (item == Items.BUCKET) {
             boolean allowed = PermissionService.isLuckPermsPresent()
                     ? PermissionService.checkNode(sp, "fluids.pickup") ||
