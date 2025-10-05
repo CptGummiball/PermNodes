@@ -5,7 +5,7 @@ license="MIT"
 [[mods]]
 modId="permnodes"
 version="1.0.0"
-displayName="NeoForge Permissions Nodes"
+displayName="PermNodes"
 description='''
 Permission-based restrictions for block placement/mining and crafting.
 Optionally integrates with LuckPerms and uses a namespace:path scheme.
@@ -14,14 +14,14 @@ Optionally integrates with LuckPerms and uses a namespace:path scheme.
 [[dependencies.permnodes]]
 modId = "neoforge"
 type = "required"
-versionRange = "${neo_version_range}"
+versionRange = "[21.8.46,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.permnodes]]
 modId = "minecraft"
 type = "required"
-versionRange = "${minecraft_version_range}"
+versionRange = "[1.21.8,1.22)"
 ordering = "NONE"
 side = "BOTH"
 
