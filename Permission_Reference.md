@@ -45,7 +45,6 @@
 |  | `use.bypass` |  | Bypass all item-use checks. |
 
 ### Interactions (Blocks / Containers / etc.)
-> **Villager trading has been moved to the dedicated Villagers category below.**
 | Category | Permission Pattern | Example(s) | Effect / Description |
 |---|---|---|---|
 | **Interact** | `interact.<ns>.<path>` | `interact.minecraft.chest`, `interact.minecraft.oak_door` | Allow interacting with a specific **block** (right-click). |
