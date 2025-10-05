@@ -28,7 +28,7 @@ It integrates with **LuckPerms** (optional) to allow granular control over playe
 - 🏠 **Villagers:** ineract (trade), attack
 - 🌾 **Crops:** harvest, trample, seed  
 - 🌊 **Fluids:** pickup and place control  
-- 👾 **Monsters:** restrict attacking hostile mobs  
+- 👾 **Monsters:** restrict attacking hostile mobs
 - 🧩 **Mod-wide bypass:** `mod.allow.<modid>`
 
 ---
