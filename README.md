@@ -29,7 +29,6 @@ It integrates with **LuckPerms** (optional) to allow granular control over playe
 - 🌊 **Fluids:** pickup and place control  
 - 👾 **Monsters:** restrict attacking hostile mobs  
 - 🧩 **Mod-wide bypass:** `mod.allow.<modid>`  
-- 💬 Custom in-game denial messages  
 
 ---
 
