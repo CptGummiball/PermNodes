@@ -73,6 +73,15 @@ It integrates with **LuckPerms** (optional) to allow granular control over playe
 
 ---
 
+## ⚙️ LuckPerms Integration Notice
+
+LuckPerms does not currently display or auto-discover permissions from NeoForge mods.  
+All permission checks in **PermNodes** use plain string-based nodes (e.g., `blocks.place.minecraft.dirt`, `use.minecraft.bucket`).  
+These nodes are fully compatible with LuckPerms — they can be assigned, inherited, and checked normally — but they will only appear in the LuckPerms web editor **after** they have been explicitly created or used (for example, once a permission is checked in-game or manually added to a group).
+
+If you want a predefined list of all available PermNodes permissions to appear in LuckPerms, you can create a *template group* containing the desired nodes.  
+This feature may be automated in a future update.
+
 ## 🧩 Development Setup
 
 **Gradle Example:**
