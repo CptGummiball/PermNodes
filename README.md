@@ -41,7 +41,7 @@ It integrates with **LuckPerms** (optional) to allow granular control over playe
    - (optional) **LuckPerms** mod
 
 2. **Install**
-   - Download the file `permmod-x.x.x.jar`
+   - Download the file `permnodes-x.x.x.jar`
    - Place it in your server’s `mods/` directory
 
 3. **Run**
