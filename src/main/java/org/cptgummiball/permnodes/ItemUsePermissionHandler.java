@@ -16,6 +16,7 @@ public final class ItemUsePermissionHandler {
                 .orElseGet(() -> BuiltInRegistries.ITEM.getKey(s.getItem()));
     }
 
+    /* Using items */
     @SubscribeEvent
     public void onRightClickItem(PlayerInteractEvent.RightClickItem e) {
         if (!(e.getEntity() instanceof ServerPlayer sp)) return;

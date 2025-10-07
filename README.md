@@ -1,7 +1,6 @@
 # 🧩 PermNodes
 
-**A modular permission management mod for NeoForge 1.21.8+**  
-Author: **cptgummiball** • License: **MIT**
+**A modular permission management mod for NeoForge 1.21.8+**
 
 ---
 
@@ -25,10 +24,10 @@ It integrates with **LuckPerms** (optional) to allow granular control over playe
 - 🌀 **Portals:** `portal.*` for dimension access  
 - ⚔️ **PvP:** `pvp.attack_players` and global toggles  
 - 🐄 **Animals:** breed, milk, shear, lead, name_tag, attack
-- 🏠 **Villagers:** ineract (trade), attack
+- 🏠 **Villagers:** interact (trade), attack
 - 🌾 **Crops:** harvest, trample, seed  
 - 🌊 **Fluids:** pickup and place control  
-- 👾 **Monsters:** restrict attacking hostile mobs
+- 👾 **Monsters:** restrict attacking hostile mobs  
 - 🧩 **Mod-wide bypass:** `mod.allow.<modid>`
 
 ---
@@ -123,4 +122,4 @@ Please open them on the GitHub repository.
 
 ---
 
-> _"Simple structure, deep control."_ – **PermNodes**
+**PermNodes** © 2025 by *cptgummiball* — released under the **MIT License**.

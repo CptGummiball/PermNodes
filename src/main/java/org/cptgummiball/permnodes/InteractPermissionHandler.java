@@ -37,6 +37,7 @@ public final class InteractPermissionHandler {
         return tagMatch;
     }
 
+    /* Interacting */
     @SubscribeEvent
     public void onRightClickBlock(PlayerInteractEvent.RightClickBlock e) {
         if (!(e.getEntity() instanceof ServerPlayer sp)) return;

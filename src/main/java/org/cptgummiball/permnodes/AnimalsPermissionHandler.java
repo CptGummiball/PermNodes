@@ -45,6 +45,7 @@ public final class AnimalsPermissionHandler {
                 || PermissionService.checkNode(sp, "animals.allow_default");
     }
 
+    /* Attacking */
     @SubscribeEvent
     public void onAttack(AttackEntityEvent e) {
         if (!(e.getEntity() instanceof ServerPlayer attacker)) return;
@@ -65,10 +66,11 @@ public final class AnimalsPermissionHandler {
 
         if (!canAttack(attacker, e.getEntity())) {
             e.setCanceled(true);
-            attacker.displayClientMessage(PermConfig.MSG_ANIMAL_DENY, true);
+            attacker.displayClientMessage(PermConfig.MSG_ANIMAL_ATTACK_DENY, true);
         }
     }
 
+    /* Breeding */
     @SubscribeEvent
     public void onBreed(BabyEntitySpawnEvent e) {
         if (!(e.getCausedByPlayer() instanceof ServerPlayer sp)) return;
@@ -86,6 +88,7 @@ public final class AnimalsPermissionHandler {
         }
     }
 
+    /* Interactions: Shear, Milk, Lead, Name Tag */
     @SubscribeEvent
     public void onEntityInteract(PlayerInteractEvent.EntityInteract e) {
         if (!(e.getEntity() instanceof ServerPlayer sp)) return;

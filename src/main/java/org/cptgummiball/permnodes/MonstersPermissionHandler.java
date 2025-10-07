@@ -42,6 +42,7 @@ public final class MonstersPermissionHandler {
                 || PermissionService.checkNode(sp, "monsters.allow_default");
     }
 
+    /* Attacking */
     @SubscribeEvent
     public void onAttack(AttackEntityEvent e) {
         if (!(e.getEntity() instanceof ServerPlayer attacker)) return;

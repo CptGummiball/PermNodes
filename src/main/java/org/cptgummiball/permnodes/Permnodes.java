@@ -25,6 +25,7 @@ public final class Permnodes {
         NeoForge.EVENT_BUS.register(new CropsPermissionHandler());
         NeoForge.EVENT_BUS.register(new FluidsPermissionHandler());
         NeoForge.EVENT_BUS.register(new MonstersPermissionHandler());
+        NeoForge.EVENT_BUS.register(new VillagerPermissionHandler());
     }
 
     private void commonSetup(FMLCommonSetupEvent e) {}

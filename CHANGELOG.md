@@ -3,6 +3,20 @@
 All notable changes to **PermNodes** will be documented in this file.  
 This project follows [Semantic Versioning](https://semver.org/).
 
+## [1.0.2] – 2025-10-06
+### Bug Fixes 🐛
+**Author:** cptgummiball  
+**Minecraft:** 1.21.8+  
+**NeoForge:** 21.8.46+
+
+### ‍🧑‍🌾 Villager Permissions Fixes
+- Fixed a bug where Villager trading was not properly restricted by permissions.
+- Fixed a bug where Villager attack protection was not functioning correctly.
+- Fixed Villager interaction permissions (syntax and logic):
+    - Changed from `interact.villager.<ns>.<path>` to `villagers.interact.<ns>.<path>`
+    - Changed from `interact.villager.<ns>.*` to `villagers.interact.<ns>.*`
+    - Changed from `interact.villager.*` to `villagers.interact.*`
+
 ---
 
 ## [1.0.1] – 2025-10-06

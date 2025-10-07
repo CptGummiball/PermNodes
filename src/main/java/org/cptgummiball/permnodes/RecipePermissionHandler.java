@@ -19,6 +19,7 @@ public final class RecipePermissionHandler {
         return id.getNamespace() + "." + id.getPath();
     }
 
+    /* Crafting */
     @SubscribeEvent
     public void onCrafted(PlayerEvent.ItemCraftedEvent e) {
         if (!(e.getEntity() instanceof ServerPlayer sp)) return;

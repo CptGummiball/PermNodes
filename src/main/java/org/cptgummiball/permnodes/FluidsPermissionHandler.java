@@ -9,6 +9,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 public final class FluidsPermissionHandler {
 
+    /* Placing and picking up fluids */
     @SubscribeEvent
     public void onRightClickItem(PlayerInteractEvent.RightClickItem e) {
         if (!(e.getEntity() instanceof ServerPlayer sp)) return;

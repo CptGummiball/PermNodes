@@ -38,6 +38,7 @@ public final class BlockPermissionHandler {
         });
     }
 
+    /* Breaking */
     @SubscribeEvent
     public void onBreak(BlockEvent.BreakEvent e) {
         if (!(e.getPlayer() instanceof ServerPlayer sp)) return;
@@ -58,6 +59,7 @@ public final class BlockPermissionHandler {
         }
     }
 
+    /* Placing */
     @SubscribeEvent
     public void onPlace(BlockEvent.EntityPlaceEvent e) {
         if (!(e.getEntity() instanceof ServerPlayer sp)) return;

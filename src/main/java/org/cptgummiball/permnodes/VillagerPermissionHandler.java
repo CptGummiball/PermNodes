@@ -24,25 +24,26 @@ public final class VillagerPermissionHandler {
     }
 
     private static boolean canTrade(ServerPlayer sp, Entity villager) {
-        if (PermissionService.checkNode(sp, "interact.bypass")) return true;
+        if (PermissionService.checkNode(sp, "villagers.bypass")) return true;
 
         ResourceLocation id = entityId(villager);
         String ns  = id.getNamespace();
         String dot = ns + "." + id.getPath();
 
         if (!PermissionService.isLuckPermsPresent()) {
-            return PermissionService.checkNode(sp, "interact.allow_default");
+            return PermissionService.checkNode(sp, "villagers.allow_default");
         }
 
         if (PermissionService.checkNode(sp, "mod.allow." + ns)) return true;
 
-        return PermissionService.checkNode(sp, "interact.villager." + dot)
-                || PermissionService.checkNode(sp, "interact.villager." + ns + ".*")
-                || PermissionService.checkNode(sp, "interact.villager.*")
-                || PermissionService.checkNode(sp, "interact.*")
-                || PermissionService.checkNode(sp, "interact.allow_default");
+        return PermissionService.checkNode(sp, "villagers.interact." + dot)
+                || PermissionService.checkNode(sp, "villagers.interact." + ns + ".*")
+                || PermissionService.checkNode(sp, "villagers.interact.*")
+                || PermissionService.checkNode(sp, "villagers.*")
+                || PermissionService.checkNode(sp, "villagers.allow_default");
     }
 
+    /* Interacting (trading) */
     @SubscribeEvent
     public void onVillagerInteract(PlayerInteractEvent.EntityInteract e) {
         if (!(e.getEntity() instanceof ServerPlayer sp)) return;
@@ -74,6 +75,7 @@ public final class VillagerPermissionHandler {
                 || PermissionService.checkNode(sp, "villagers.allow_default");
     }
 
+    /* Attacking */
     @SubscribeEvent
     public void onAttackVillager(AttackEntityEvent e) {
         if (!(e.getEntity() instanceof ServerPlayer attacker)) return;

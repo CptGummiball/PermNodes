@@ -9,6 +9,7 @@ import net.neoforged.neoforge.event.entity.EntityTravelToDimensionEvent;
 
 public final class PortalPermissionHandler {
 
+    /* Traveling through portals */
     @SubscribeEvent
     public void onTravel(EntityTravelToDimensionEvent e) {
         if (!(e.getEntity() instanceof ServerPlayer sp)) return;

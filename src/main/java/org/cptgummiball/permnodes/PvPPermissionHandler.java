@@ -7,6 +7,7 @@ import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 
 public final class PvPPermissionHandler {
 
+    /* Attacking players */
     @SubscribeEvent
     public void onAttack(AttackEntityEvent e) {
         if (!(e.getEntity() instanceof ServerPlayer attacker)) return;

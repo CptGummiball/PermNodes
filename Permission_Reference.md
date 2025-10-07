@@ -105,13 +105,13 @@
 |  | `monsters.bypass` |  | Bypass all monster checks. |
 
 ### Villagers (Trading & Protection)
-| Category | Permission Pattern | Example(s) | Effect / Description |
-|---|---|---|---|
-| **Trading / Interaction** | `interact.villager.<ns>.<path>` | `interact.villager.minecraft.villager`, `interact.villager.minecraft.wandering_trader` | Allow opening/trading with a specific villager-type entity. |
-|  | `interact.villager.<ns>.*` | `interact.villager.minecraft.*` | Allow interaction with all villager-type entities from `<ns>`. |
-|  | `interact.villager.*` |  | Allow all villager interactions. |
-| **Attack** | `villagers.attack.<ns>.<path>` | `villagers.attack.minecraft.villager` | Allow damaging a specific villager-type entity. |
-|  | `villagers.attack.<ns>.*` | `villagers.attack.minecraft.*` | Allow damaging any villager-type entity from `<ns>`. |
-|  | `villagers.attack.*` |  | Allow damaging any villager-type entity. |
-|  | `villagers.allow_default` |  | Fallback allow (villager attack). |
-|  | `villagers.bypass` |  | Bypass all villager attack checks. |
+| Category | Permission Pattern               | Example(s)                                                                               | Effect / Description |
+|---|----------------------------------|------------------------------------------------------------------------------------------|---|
+| **Trading / Interaction** | `villagers.interact.<ns>.<path>` | `villagers.interact.minecraft.villager`, `villagers.interact.minecraft.wandering_trader` | Allow opening/trading with a specific villager-type entity. |
+|  | `villagers.interact.<ns>.*`      | `villagers.interact.minecraft.*`                                                         | Allow interaction with all villager-type entities from `<ns>`. |
+|  | `villagers.interact.*`           |                                                                                          | Allow all villager interactions. |
+| **Attack** | `villagers.attack.<ns>.<path>`   | `villagers.attack.minecraft.villager`                                                    | Allow damaging a specific villager-type entity. |
+|  | `villagers.attack.<ns>.*`        | `villagers.attack.minecraft.*`                                                           | Allow damaging any villager-type entity from `<ns>`. |
+|  | `villagers.attack.*`             |                                                                                          | Allow damaging any villager-type entity. |
+|  | `villagers.allow_default`        |                                                                                          | Fallback allow (villager attack). |
+|  | `villagers.bypass`               |                                                                                          | Bypass all villager attack checks. |

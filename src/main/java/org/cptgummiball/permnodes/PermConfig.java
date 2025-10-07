@@ -2,6 +2,10 @@ package org.cptgummiball.permnodes;
 
 import net.minecraft.network.chat.Component;
 
+/**
+ * Configuration for permission denial messages.
+ */
+
 public final class PermConfig {
     public static final Component MSG_PLACE_DENY   = Component.literal("§cYou are not allowed to place this block!");
     public static final Component MSG_BREAK_DENY   = Component.literal("§cYou are not allowed to break this block!");

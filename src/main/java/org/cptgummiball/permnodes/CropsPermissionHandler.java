@@ -10,6 +10,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 public final class CropsPermissionHandler {
 
+    /* Breaking fully grown crops */
     @SubscribeEvent
     public void onBreak(BlockEvent.BreakEvent e) {
         if (!(e.getPlayer() instanceof ServerPlayer sp)) return;
@@ -29,6 +30,7 @@ public final class CropsPermissionHandler {
         }
     }
 
+    /* Trampling farmland */
     @SubscribeEvent
     public void onTrample(BlockEvent.FarmlandTrampleEvent e) {
         if (!(e.getEntity() instanceof ServerPlayer sp)) return;
@@ -43,6 +45,7 @@ public final class CropsPermissionHandler {
         if (!allowed) e.setCanceled(true);
     }
 
+    /* Planting seeds */
     @SubscribeEvent
     public void onSeed(PlayerInteractEvent.RightClickBlock e) {
         if (!(e.getEntity() instanceof ServerPlayer sp)) return;

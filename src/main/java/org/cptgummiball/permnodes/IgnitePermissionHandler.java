@@ -8,6 +8,7 @@ import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 
 public final class IgnitePermissionHandler {
 
+    /* Igniting TNT */
     @SubscribeEvent
     public void onTntPrimed(EntityJoinLevelEvent e) {
 
